@@ -1,7 +1,8 @@
 import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIza........",
+  apiKey: "AIzaSyCRZyUwuuIrJC4qHGZLF9WUJlNY7OBUd3c",
   authDomain: "leetcode-clone-d2d94.firebaseapp.com",
   projectId: "leetcode-clone-d2d94",
   storageBucket: "leetcode-clone-d2d94.firebasestorage.app",
@@ -11,5 +12,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+
+export const auth = getAuth(app);
 
 export default app;
