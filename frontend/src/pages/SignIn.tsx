@@ -1,6 +1,7 @@
 import{ useState } from "react";
 import { auth } from "../firebase/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 function SignIn() {
     const [email, setEmail] = useState("");
@@ -9,10 +10,12 @@ function SignIn() {
         try {
             const userCredential = await signInWithEmailAndPassword(auth, email, password);
             console.log(userCredential.user);
+            navigate("/");
         }catch (error){
             console.error(error);
         }
     }
+    const navigate = useNavigate();
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-900">
