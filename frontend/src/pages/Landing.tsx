@@ -1,8 +1,13 @@
+import TopBar from "../components/TopBar";
 
 
 function Landing() {
   return (
-    <div>Landing Page</div>
+    <>
+      <TopBar />
+      <div>Landing Page</div>
+    </>
+    
   );
 }
 
